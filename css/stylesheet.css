@@ -2668,6 +2668,70 @@ html[dir="rtl"] .list-style-1 > li:after {
 .list-style-2.list-style-light > li {
   border-bottom: 1px solid rgba(250, 250, 250, 0.12);
 }
+/*=== About - Texto + Card lateral =====================*/
+
+/* Justificar textos dos cards de Serviços */
+#services .featured-box p {
+  text-align: justify;
+}
+.text-justify {
+  text-align: justify !important;
+}
+
+/* Deixar o texto “Sobre mim” justificado */
+.about-text p,
+.about-text ul {
+  text-align: justify;
+}
+
+/* Pequeno ajuste no padding da lista (bullets) */
+.about-text ul {
+  padding-left: 1.2rem;
+}
+
+/* Card do lado direito (nome, e-mail, idade, cidade, botão) */
+.about-card {
+  position: relative;
+  border-radius: 16px;
+  padding: 24px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+/* Moldura fina animada em volta do card */
+.about-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px; /* espessura da moldura */
+  background: linear-gradient(120deg, #20c997, #0061ff, #7f5af0);
+  background-size: 200% 200%;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: aboutBorderMove 6s linear infinite;
+  pointer-events: none;
+}
+
+/* Animação suave da borda */
+@keyframes aboutBorderMove {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Ajustes dentro do card */
+.about-card ul {
+  margin-bottom: 1.5rem;
+}
+
+.about-card a.btn {
+  box-shadow: none;
+}
 
 /* =================================== */
 /*  6. Footer
