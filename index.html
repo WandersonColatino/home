@@ -24,6 +24,148 @@
 <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.min.css" />
 <!-- Custom Stylesheet -->
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+
+<!-- Tema claro: fundo branco, textos pretos e azul -->
+<style>
+:root {
+  --primary-color: #0d6efd;  /* azul padrão Bootstrap */
+  --text-color: #000000;
+  --bg-color: #ffffff;
+}
+
+/* Fundo geral */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--bg-color) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-brand {
+  color: var(--text-color) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Seções que eram escuras */
+.bg-dark,
+.bg-dark-1,
+.bg-dark-2,
+.footer-dark {
+  background-color: var(--bg-color) !important;
+}
+
+/* Máscara do hero (antes bem escura) */
+.hero-mask.bg-dark {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Textos */
+.text-white,
+.text-light,
+.text-white-50 {
+  color: var(--text-color) !important;
+}
+
+.text-muted {
+  color: #555 !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+/* Botões */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0b5ed7;
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-outline-secondary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* Badges e ícones */
+.badge.bg-danger {
+  background-color: var(--primary-color) !important;
+}
+
+.featured-box-icon {
+  color: var(--primary-color) !important;
+}
+
+/* Barras de progresso */
+.progress.bg-dark {
+  background-color: #e9ecef !important;
+}
+
+.progress-bar {
+  background-color: var(--primary-color);
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: #0b5ed7;
+}
+
+/* Footer */
+#footer p,
+#footer a {
+  color: var(--text-color);
+}
+
+/* Preloader */
+.preloader-dark {
+  background-color: #ffffff !important;
+}
+
+/* Botão back-to-top */
+#back-to-top {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* Social icons (mantém, mas com melhor contraste) */
+.social-icons-muted a {
+  color: #333;
+}
+.social-icons-muted a:hover {
+  color: var(--primary-color);
+}
+</style>
+
 </head>
 
 <body class="side-header" data-bs-spy="scroll" data-bs-target="#header-nav" data-bs-offset="1">
@@ -87,7 +229,7 @@
     <section id="home">
       <div class="hero-wrap">
         <div class="hero-mask opacity-8 bg-dark"></div>
-        <div class="hero-bg parallax" style="background-image:url('images/intro-bg2.jpg');"></div>
+        <div class="hero-bg parallax" style="background-image:url('images/intro-bg2.png');"></div>
         <div class="hero-content section d-flex min-vh-100">
           <div class="container my-auto">
             <div class="row">
@@ -98,7 +240,6 @@
                 </div>
                 <p class="text-7 fw-500 text-white mb-2 mb-md-3">Bem-vindo(a) ao meu portfólio</p>
                 <h2 class="text-16 fw-600 text-white mb-2 mb-md-3"><span class="typed"></span></h2>
-                <!--  <p class="text-5 text-light mb-4">baseado em Uberlândia, Minas Gerais.</p>--> 
 				<a href="#contact" class="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2">Fale comigo</a>
               </div>
             </div>
@@ -122,42 +263,55 @@
         <!-- Heading end-->
         
         <div class="row gy-5">
-          <div class="col-lg-7 col-xl-8 text-center text-lg-start">
-            <h2 class="text-7 text-white fw-600 mb-3">Eu sou <span class="text-primary">Wanderson Colatino,</span> Engenheiro de Dados</h2>
-            
-            <p class="text-white-50">
-              Sou um profissional com trajetória sólida em engenharia de dados, arquitetura analítica e governança de informação, 
-              atuando na construção de ambientes que transformam dados em vantagem competitiva.
-            </p>
-            <p class="text-white-50">
-              Nos últimos anos, venho estruturando pipelines complexos em nuvem (AWS), aplicando PySpark para processamento em larga escala 
-              e integrando diferentes fontes de dados — XML, JSON, Parquet e bases relacionais — em ambientes governados e escaláveis.
-            </p>
-            <p class="text-white-50">
-              Participo ativamente de todo o ciclo de dados: da ingestão até o consumo, passando por modelagem, performance, 
-              versionamento e documentação. Tenho experiência na implantação de DataHub clusterizado, integração com PostgreSQL externo, 
-              schemas dinâmicos e catalogação de metadados, garantindo confiabilidade e rastreabilidade em ecossistemas analíticos.
-            </p>
-            <p class="text-white-50">
-              Com perfil analítico e colaborativo, valorizo a clareza técnica e a entrega de soluções sustentáveis. 
-              Busco unir precisão técnica com visão de negócio, traduzindo desafios em projetos concretos e mensuráveis.
-            </p>
-            <p class="text-white-50 mb-0">
-              <span class="me-1">🚀</span><strong>O que me move:</strong> 
-              Entregar soluções de dados que sejam robustas, auditáveis e gerem valor real, contribuindo para decisões estratégicas 
-              e para a evolução digital das empresas.
-            </p>
-          </div>
-          <div class="col-lg-5 col-xl-4">
-            <div class="ps-lg-4">
-              <ul class="list-style-2 list-style-light text-light">
-                <li><span class="fw-600 me-2">Nome:</span>Wanderson Colatino</li>
-                <li><span class="fw-600 me-2">E-mail:</span><a href="mailto:gc.wanderson@gmail.com">gc.wanderson@gmail.com</a></li>
-                <li><span class="fw-600 me-2">Experiência:</span>10+ anos em dados e analytics</li>
-                <li class="border-0"><span class="fw-600 me-2">De:</span>Uberlândia, Minas Gerais</li>
-              </ul>
-              <a href="cv/WandersonColatinoCV.pdf" class="btn btn-primary rounded-pill" target="_blank" rel="noopener noreferrer">Baixar CV</a> 
-			</div>
+  <!-- COLUNA ESQUERDA -->
+  <div class="col-lg-7 col-xl-8 text-center text-lg-start">
+    <h2 class="text-7 text-white fw-600 mb-3">
+      Eu sou <span class="text-primary">Wanderson Colatino,</span> Engenheiro de Dados
+    </h2>
+    
+    <p class="text-white-50 text-justify">
+      Sou um profissional com trajetória sólida em engenharia de dados, arquitetura analítica e governança de informação, 
+      atuando na construção de ambientes que transformam dados em vantagem competitiva.
+    </p>
+    <p class="text-white-50 text-justify">
+      Nos últimos anos, venho estruturando pipelines complexos em nuvem (AWS), aplicando PySpark para processamento em larga escala 
+      e integrando diferentes fontes de dados — XML, JSON, Parquet e bases relacionais — em ambientes governados e escaláveis.
+    </p>
+    <p class="text-white-50 text-justify">
+      Participo ativamente de todo o ciclo de dados: da ingestão até o consumo, passando por modelagem, performance, 
+      versionamento e documentação. Tenho experiência na implantação de DataHub clusterizado, integração com PostgreSQL externo, 
+      schemas dinâmicos e catalogação de metadados, garantindo confiabilidade e rastreabilidade em ecossistemas analíticos.
+    </p>
+    <p class="text-white-50 text-justify">
+      Com perfil analítico e colaborativo, valorizo a clareza técnica e a entrega de soluções sustentáveis. 
+      Busco unir precisão técnica com visão de negócio, traduzindo desafios em projetos concretos e mensuráveis.
+    </p>
+    <p class="text-white-50 mb-0 text-justify">
+      <span class="me-1">🚀</span><strong>O que me move:</strong> 
+      Entregar soluções de dados que sejam robustas, auditáveis e gerem valor real, contribuindo para decisões estratégicas 
+      e para a evolução digital das empresas.
+    </p>
+  </div>
+
+  <!-- COLUNA DIREITA -->
+  <div class="col-lg-5 col-xl-4">
+    <div class="ps-lg-4">
+      <ul class="list-style-2 list-style-light text-light">
+        <li><span class="fw-600 me-2">Nome:</span>Wanderson Colatino</li>
+        <li><span class="fw-600 me-2">E-mail:</span>
+          <a href="mailto:gc.wanderson@gmail.com">gc.wanderson@gmail.com</a>
+        </li>
+        <li><span class="fw-600 me-2">Experiência:</span>10+ anos em dados e analytics</li>
+        <li class="border-0"><span class="fw-600 me-2">De:</span>Uberlândia, Minas Gerais</li>
+      </ul>
+      <a href="cv/WandersonColatinoCV.pdf" class="btn btn-primary rounded-pill"
+         target="_blank" rel="noopener noreferrer">
+        Baixar CV
+      </a>
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
         <div class="brands-grid separator-border separator-border-light mt-5">
@@ -181,6 +335,7 @@
       </div>
     </section>
     <!-- About end --> 
+    
     
     <!-- Services
     ============================================= -->
@@ -244,6 +399,7 @@
       </div>
     </section>
     <!-- Services end --> 
+    
     
     <!-- Resume
     ============================================= -->
